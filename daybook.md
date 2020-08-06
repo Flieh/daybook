@@ -1,4 +1,7 @@
-BLUETOOTH ERRORS
+**Daybook**
+Hi I just converted my solutions.txt file to this markdown soluion\
+
+**BLUETOOTH ERRORS**
 
 https://askubuntu.com/questions/801404/bluetooth-connection-failed-blueman-bluez-errors-dbusfailederror-protocol-no
 
