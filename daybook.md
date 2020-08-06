@@ -1,5 +1,8 @@
+---
 **Daybook**
-Hi I just converted my solutions.txt file to this markdown soluion\
+
+Hi I just converted my solutions.txt file to this markdown soluion
+---
 
 **BLUETOOTH ERRORS**
 
