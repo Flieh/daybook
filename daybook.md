@@ -1,5 +1,3 @@
-2020-08-07 Fri 03:13 PM
-
 ## Markdown Watch Test 
 2020-08-07 Fri 12:15 PM
 
@@ -9,7 +7,7 @@
 
 **update** Auto commiting and pushing to github on file change
 
-    inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" file.txt | bash
+    inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" daybook.md | bash
 
 ## Vim: date
 2020-08-07 Fri 12:16 PM
