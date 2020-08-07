@@ -1,9 +1,14 @@
+
 ## Markdown Watch Test 
 2020-08-07 Fri 12:15 PM
 
 [pushing a watched file to github](https://gist.github.com/darencard/5d42319abcb6ec32bebf6a00ecf99e86)
 
 **update:** Now, I'm using [markdown-preview.vim](https://github.com/iamcco/markdown-preview.vim)
+
+**update** Auto commiting and pushing to github on file change
+
+    inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" file.txt | bash
 
 ## Vim: date
 2020-08-07 Fri 12:16 PM
