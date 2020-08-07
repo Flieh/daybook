@@ -1,9 +1,16 @@
+** [pushing a watched file to github](https://gist.github.com/darencard/5d42319abcb6ec32bebf6a00ecf99e86) **
+
+
 **vim date**
+
 **Fri 07 Aug 2020 08:52:49 AM CEST**
 
 add the following lines to .vimrc
+
+```
 nmap <F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+```
 
 **Daybook**
 
