@@ -1,3 +1,8 @@
+## Pip errors
+2020-11-08 Sun 10:04 AM
+
+    python3 -m pip install --user --upgrade pip
+
 ## Markdown Watch Test 
 2020-08-07 Fri 12:15 PM
 
