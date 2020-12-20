@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <title>daybook</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">daybook</a></h1>
+                <nav><ul>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/daybook.html">Daybook</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-11-29T18:49:00+01:00">
+                Published: Sun 29 November 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/sean-wayman.html">Sean Wayman</a>
+        </address>
+<p>In <a href="/category/blog.html">Blog</a>.</p>
+
+</footer><!-- /.post-info --><h2>Python versions (3.6 vs 3.8)</h2>
+<p>2020-11-08 Sun 11:38 AM
+I installed python3.8 and used 
+    sudo update-alternatives --config python3
+to switch to 3.8. This however seems to have broken apt-get so it needs to be reset back to to 3.6 for installation of packages.</p>
+<h3>Porteus installation</h3>
+<ul>
+<li>
+<p>porteus packages must be unpacked into $PORTDIR which on the packbell install is /mnt/sda1/porteus/modules</p>
+</li>
+<li>
+<p>create a symlink in /usr/bin to the module</p>
+</li>
+<li>
+<p>in order to update usm for first time edit /etc/usm/mirrors-slacky.txt. Uncomment the UK mirror and comment the Europe mirror.</p>
+</li>
+</ul>
+<h2>Pip errors</h2>
+<p>2020-11-08 Sun 10:04 AM</p>
+<div class="highlight"><pre><span></span><code><span class="err">python3 -m pip install --user --upgrade pip</span>
+</code></pre></div>
+
+<h2>Markdown Watch Test</h2>
+<p>2020-08-07 Fri 12:15 PM</p>
+<p><a href="https://gist.github.com/darencard/5d42319abcb6ec32bebf6a00ecf99e86">pushing a watched file to github</a></p>
+<p><strong>update:</strong> Now, I'm using <a href="https://github.com/iamcco/markdown-preview.vim">markdown-preview.vim</a></p>
+<p><strong>update</strong> Auto commiting and pushing to github on file change</p>
+<div class="highlight"><pre><span></span><code><span class="err">inotifywait -q -m -e CLOSE_WRITE --format=&quot;git commit -m &#39;autocommit on change&#39; %w&quot; daybook.md | bash</span>
+</code></pre></div>
+
+<h2>Vim: date</h2>
+<p>2020-08-07 Fri 12:16 PM</p>
+<p>add the following lines to .vimrc</p>
+<div class="highlight"><pre><span></span><code><span class="err">nmap &lt;F3&gt; i&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %a %I:%M %p&quot;)&lt;CR&gt;&lt;Esc&gt;</span>
+<span class="err">imap &lt;F3&gt; &lt;C-R&gt;=strftime(&quot;%Y-%m-%d %a %I:%M %p&quot;)&lt;CR&gt;</span>
+</code></pre></div>
+
+<h2>Daybook</h2>
+<p>2020-08-07 Fri 12:17 PM</p>
+<p>Hi I just converted my solutions.txt file to this markdown soluion</p>
+<h2>Bluetooth errors</h2>
+<p>https://askubuntu.com/questions/801404/bluetooth-connection-failed-blueman-bluez-errors-dbusfailederror-protocol-no</p>
+<p>The solution from this article worked for me:</p>
+<div class="highlight"><pre><span></span><code><span class="err">sudo apt-get install pulseaudio-module-bluetooth pactl load-module module-bluetooth-discover</span>
+</code></pre></div>
+
+<p>Then delete the device from bluetooth devices and pair it again.</p>
+<p>If it works, you can consider adding the second command to your startup settings, so that you don't have to run it again after every reboot.</p>
+<p>If it doesn't work, try restarting pulseaudio:</p>
+<div class="highlight"><pre><span></span><code><span class="err">pulseaudio -k</span>
+<span class="err">pulseaudio -D</span>
+</code></pre></div>
+
+<h2>Linux: kill unwanted processes</h2>
+<p>2020-08-07 Fri 12:24 PM</p>
+<p>IDENTIFY IT WITH</p>
+<div class="highlight"><pre><span></span><code><span class="err">pgrep &lt;process-name-yer-lookin-fer&gt;</span>
+</code></pre></div>
+
+<p>then kill it</p>
+<div class="highlight"><pre><span></span><code><span class="err">kill -9 &lt;pid&gt; or &lt;name-you-grepped-above&gt;</span>
+</code></pre></div>
+
+<h2>JS: sliders (investigating)</h2>
+<p>2020-08-07 Fri 12:24 PM</p>
+<p>Looking at <a href="https://www.splidejs.com">splidejs.com</a></p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="https://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                            <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

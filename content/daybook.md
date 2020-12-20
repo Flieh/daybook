@@ -1,3 +1,16 @@
+Title: Daybook
+Date: 2020-11-29 Sun 06:49 PM
+Category: Blog
+ 
+## logitech usb pairing
+2020-12-09 Wed 05:43 PM
+
+'''sudo apt-get install git gcc
+git clone https://git.lekensteyn.nl/ltunify.git
+cd ltunify
+make install-home
+
+
 ## Python versions (3.6 vs 3.8)
 2020-11-08 Sun 11:38 AM
 I installed python3.8 and used 
