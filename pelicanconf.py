@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Sean Wayman'
-SITENAME = 'daybook'
+SITENAME = 'Daybook'
 SITEURL = ''
 
 PATH = 'content'
+ARTICLE_PATHS = ['blog']
 
 TIMEZONE = 'Europe/Paris'
 
@@ -19,14 +20,16 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
+LINKS = (('Pelican', 'https://getpelican.com/'), ('Python.org',
+                                                  'https://www.python.org/'),
          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Restaurant Saint Alexis', 'https://www.saintalexis.fr'))
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('You can add links in your config file', '#'),
+    ('Another social link', '#'),
+)
 
 DEFAULT_PAGINATION = 10
 
